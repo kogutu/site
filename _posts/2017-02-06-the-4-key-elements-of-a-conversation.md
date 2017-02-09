@@ -14,7 +14,7 @@ tags:
 - Conversational Interfaces
 
 ---
-Conversational Interfaces is a term often used to define systems that hold "human-like" conversations, examples include; Chatbots, Voice User Interfaces, and Embodied Conversational Agents. The user interacts with these using text input, voice recognition, and gestures. These types of interfaces are often unable to provide a good conversational experience. In order to create a better experience we need to be aware of the following 4 key elements of human-to-human conversations and how they relate to conversational interfaces.
+Conversational Interfaces is a term often used to define systems that hold "human-like" conversations, examples include: Chatbots, Voice User Interfaces, and Embodied Conversational Agents. The user interacts with these using text input, voice recognition, and gestures. These types of interfaces are often unable to provide a good conversational experience. In order to create a better experience we need to be aware of the following 4 key elements of human-to-human conversations and how they relate to conversational interfaces.
 
 ## 1. Turn-taking
 > A turn is one interaction between the user and the system, and a conversation is made of at least two turns.
@@ -76,7 +76,7 @@ In the second turn the user responds with, “Can you tell me more?”, a human-
 
 <a href="https://www.hipmunk.com/">Hipmunk</a> is a chatbot that promises to help you plan travel in the easiest and fastest way. The two screenshots below show that the system doesn’t support the fourth key element of conversation. The system misinterprets my answer the first time that I enter the airport, because it accepts city names and airport codes only.
 
-There are number of ways that the user could reply to open questions, and spending time on researching them will have a positive impact on the user experience.
+There are number of ways that the user could reply to an open question, and spending time on researching possible answers will have a positive impact on the user experience.
 
 <div class="images-side-by-side-left">
   <img src="{{site.baseurl}}/assets/img/custom/blog/2017-02-06-conversational-interface-design-fundamentals/hipmunk-chatbot-1.jpg" alt="Hipmunk on Facebook Messenger" width="250" height="300" />

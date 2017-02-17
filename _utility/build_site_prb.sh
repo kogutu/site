@@ -2,8 +2,15 @@
 set -e
 FOLDER_NAME=$1
 
-[ -f ../site_cache/site_cache.tar.gz ] && tar -xvzf site_cache.tar.gz _site/
-rm -rf ../site_cache/*
+CACHE_FOLDER="$(pwd)/site_cache/"
+CACHE_ARTIFACT="${CACHE_FOLDER}site_cache.tar.gz"
+SITE_COMPILATION='_site/'
+
+if [ -f $CACHE_ARTIFACT ]; then
+  echo "Uncompressing previous cached site"
+  tar -xvzf $CACHE_ARTIFACT _site/
+   rm -rf $CACHE_FOLDER
+fi
 
 echo "Building website for: $FOLDER_NAME"
 if [[ "$FOLDER_NAME" != "site-master" ]]; then
@@ -16,6 +23,6 @@ else
   rake buildenprb
 fi
 
-
-mkdir -p site_cache/
-tar --atime-preserve -pczf site_cache/site.tar.gz _site/
+echo "Making new cached site for later uploading"
+mkdir -p $CACHE_FOLDER
+tar --atime-preserve -pvczf $CACHE_ARTIFACT _site/
